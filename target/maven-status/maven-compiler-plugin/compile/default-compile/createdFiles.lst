@@ -1,0 +1,7 @@
+com/restdemo/exception/ValidationException.class
+com/restdemo/domain/Company.class
+com/restdemo/controller/CompanyController.class
+com/restdemo/RestDemoApplication.class
+com/restdemo/domain/CompanyDatastore.class
+com/restdemo/exception/CompanyNotFoundException.class
+com/restdemo/services/CompanyService.class

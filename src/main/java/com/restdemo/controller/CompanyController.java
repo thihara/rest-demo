@@ -34,18 +34,18 @@ public class CompanyController {
     }
 
     @RequestMapping(value = "/company", method = RequestMethod.POST)
-    public void createCompany(Company company){
+    public void createCompany(@RequestBody Company company){
         companyService.createCompany(company);
     }
 
     @RequestMapping(value = "/company/{companyID}", method = RequestMethod.PUT)
-    public void updateCompany(@PathVariable Long companyID, Company company){
+    public void updateCompany(@PathVariable Long companyID, @RequestBody Company company){
         company.setId(companyID);
         companyService.updateCompany(company);
     }
 
     @RequestMapping(value = "/company/{companyID}/owner", method = RequestMethod.PUT)
-    public void addOwner(@PathVariable Long companyID, @RequestParam String owner){
+    public void addOwner(@PathVariable Long companyID, @RequestBody String owner){
         companyService.addOwner(companyID, owner);
     }
 

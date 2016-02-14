@@ -1,0 +1,28 @@
+body, .form-control{
+	font-size:12px!important;
+}
+
+.floatRight{
+	float:right;
+	margin-right: 28%;
+}
+
+.has-error{
+	color:red;
+}
+
+.formcontainer{
+	padding: 20px;
+}
+
+.tablecontainer{
+	padding-left: 20px;
+}
+
+.generic-container {
+  width:100%;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 4px;
+}
