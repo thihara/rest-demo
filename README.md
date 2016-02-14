@@ -1,6 +1,12 @@
 # rest-demo
 A Spring-Boot application to demo Restful web services using Spring MVC.
 
+##Running the application
+
+You need JDK 1.8 installed to run this application.
+
+Once that basic requirement is filled, you can run the application using maven by running this simple command *`mvn spring-boot:run`*
+
 ##Functionality
 
 The application uses a simple in-memory datastore instead of connencting to a database to store the data. This would of course mean that once you restart the application all data is wiped clean.
