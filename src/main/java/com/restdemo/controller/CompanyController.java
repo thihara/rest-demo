@@ -17,7 +17,6 @@ import java.util.Map;
 /**
  * Created by thihara on 2/13/16.
  */
-
 @RestController
 public class CompanyController {
 
@@ -52,7 +51,23 @@ public class CompanyController {
 
     @ResponseStatus(value=HttpStatus.INTERNAL_SERVER_ERROR)
     @ExceptionHandler(Exception.class)
-    public Map<String,Object> exceptionHandler(Exception e) {
+    public Map<String,Object> genericExceptionHandler(Exception e) {
+        return getErrorMap(e);
+    }
+
+    @ResponseStatus(value=HttpStatus.NOT_FOUND)
+    @ExceptionHandler(CompanyNotFoundException.class)
+    public Map<String,Object> notFoundHandler(CompanyNotFoundException e) {
+        return getErrorMap(e);
+    }
+
+    @ResponseStatus(value=HttpStatus.BAD_REQUEST)
+    @ExceptionHandler(ValidationException.class)
+    public Map<String,Object> validationErrorHandler(ValidationException e) {
+        return getErrorMap(e);
+    }
+
+    private Map<String, Object> getErrorMap(Exception e) {
         HashMap<String, Object> result = new HashMap<>();
         result.put("error", true);
         result.put("error_message", e.getMessage());
