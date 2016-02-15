@@ -1,6 +1,8 @@
 # rest-demo
 A Spring-Boot application to demo Restful web services using Spring MVC, and an Angular JS client.
 
+Deployed demo URL : http://fierce-retreat-62806.herokuapp.com/
+
 ##Running the application
 
 You need JDK 1.8 installed to run this application.
